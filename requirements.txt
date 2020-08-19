@@ -1,4 +1,11 @@
-cv2
-streamlit
-fastai
+--find-links https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/index.html 
 detectron2
+scikit-build
+opencv-contrib-python
+numpy
+pandas
+streamlit
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==1.6.0+cpu 
+torchvision==0.7.0+cpu
+fastai
