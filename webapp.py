@@ -5,9 +5,8 @@ import PIL.Image
 import io
 import os
 import PIL
-import torch, torchvision
 import detectron2
-from detectron2.evaluation import COCOEvaluator, inference_on_dataset
+# from detectron2.evaluation import COCOEvaluator, inference_on_dataset
 from detectron2 import model_zoo
 from detectron2.config import get_cfg
 from detectron2.engine import DefaultPredictor
@@ -22,6 +21,7 @@ def create_learner():
 @st.cache(suppress_st_warning=True)
 def load_detectron():
   cfg = get_cfg()
+  cfg.MODEL.DEVICE='cpu'
   cfg.merge_from_file(
     model_zoo.get_config_file(
       "COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml"
