@@ -22,3 +22,5 @@ References for detectron2:
 
 References for fastai:
 - https://course.fast.ai/terminal_tutorial.html
+
+Note: If you want to run above code on cpu use requirementsCPU.txt to install dependencies
