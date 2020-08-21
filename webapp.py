@@ -21,7 +21,8 @@ def create_learner():
 @st.cache(suppress_st_warning=True)
 def load_detectron():
   cfg = get_cfg()
-  cfg.MODEL.DEVICE='cpu'
+  #uncomment if youy want to run this on cpu
+  #cfg.MODEL.DEVICE='cpu'
   cfg.merge_from_file(
     model_zoo.get_config_file(
       "COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml"
